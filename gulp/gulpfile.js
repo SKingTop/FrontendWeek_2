@@ -24,5 +24,4 @@ gulp.task('browser-sync', function() {
     });
 });
 
-
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
