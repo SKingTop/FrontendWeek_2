@@ -14,7 +14,7 @@ $paragraphColor: #807d77
 //Fonts
 @font-face
 	font-family: 'Georgia-Regular'
-	src: url(../fonts/Georgia-Regular.ttf)
+	src: url(../fonts/georgia/Georgia-Regular.ttf)
 *
 	font-family: (Georgia-Regular), (Arial)
 //Styles
@@ -98,9 +98,148 @@ header
 	width: 1000px
 	height: 100%
 	margin: 0px auto
+	position: relative
+	top: 0
+	left: 0
+	right: 0
+	// box-sizing: border-box
+	// border: 1px solid red
+//доделать слайдер//доделать слайдер//доделать слайдер ИСПРАВИТЬ КОСЯК!!!!!!!!!!!!!!
+.prevBtn, .nextBtn 
+	position: absolute
+	bottom: 1px
+	width: 29px
+	height: 53px
+	background-color: $classicWhite
 	box-sizing: border-box
-	border: 1px solid red
-//доделать слайдер//доделать слайдер//доделать слайдер
+	padding-top: 12px
+	cursor: pointer
+	color: $darkPink
+	display: flex
+	justify-content: center
+.prevBtn
+	left: 20px
+	border-top-left-radius: 10px
+.nextBtn
+	right: 20px
+	border-top-right-radius: 10px
+.slider-item:first-child, .slider-item:nth-child(2), .slider-item:nth-child(3), .slider-item:nth-child(4)
+	width: 100%
+	height: 100%
+	position: relative
+	.monitor, .monitorImg
+		position: absolute
+	.monitorImg
+		width: 448px
+		height: 250px
+	article
+		width: 420px
+		height: 100%
+		position: absolute
+		h2
+			font-size: 36px
+			text-transform: uppercase
+			color: #333333
+			margin: 0
+			padding: 0
+		p
+			font-size: 16px
+			color: $greyText
+			margin: 0
+			padding: 0
+			line-height: 25px
+		a
+			display: block
+			text-decoration: none
+			width: 140px
+			height: 31px
+			border-radius: 4px
+			text-align: center
+			font-size: 16px
+			background-color: $darkPink
+			color: $classicWhite
+			text-transform: uppercase
+			box-sizing: border-box
+			margin: 0
+			padding: 0
+			line-height: 31px
+.slider-item	
+	position: absolute
+	display: none
+	&:first-child
+		.monitor
+			bottom: 6px
+			left: 20px
+		.monitorImg
+			bottom: 124px
+			left: 40px
+		article
+			right: 0
+			h2
+				margin-top: 140px
+				margin-left: 15px
+			p
+				margin-top: 30px
+				margin-left: 15px
+			a
+				margin-top: 20px
+				margin-left: 15px
+	&:nth-child(2)
+		.monitor
+			bottom: 6px
+			left: 20px
+		.monitorImg
+			bottom: 124px
+			left: 40px
+		article
+			right: 0
+			h2
+				margin-top: 140px
+				margin-left: 15px
+			p
+				margin-top: 30px
+				margin-left: 15px
+			a
+				margin-top: 20px
+				margin-left: 15px
+	&:nth-child(3)
+		.monitor
+			bottom: 6px
+			left: 20px
+		.monitorImg
+			bottom: 124px
+			left: 40px
+		article
+			right: 0
+			h2
+				margin-top: 140px
+				margin-left: 15px
+			p
+				margin-top: 30px
+				margin-left: 15px
+			a
+				margin-top: 20px
+				margin-left: 15px
+	&:nth-child(4)
+		.monitor
+			bottom: 6px
+			left: 20px
+		.monitorImg
+			bottom: 124px
+			left: 40px
+		article
+			right: 0
+			h2
+				margin-top: 140px
+				margin-left: 15px
+			p
+				margin-top: 30px
+				margin-left: 15px
+			a
+				margin-top: 20px
+				margin-left: 15px
+.slider-item.current
+	display: block
 
 //доделать слайдер//доделать слайдер//доделать слайдер
 //mainContainer
@@ -132,7 +271,7 @@ header
 		height: 64px
 		margin-top: 30px
 		margin-left: 73px
-	h2
+	h3
 		font-size: 18px
 		margin-top: 20px
 		text-align: center
