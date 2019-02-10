@@ -1,18 +1,19 @@
-//Site colors !!!!!!!!!!!!!!!!!!!УМЕНЬШИТЬ КОЛИЧЕСТВО ЦВЕТОВ И НОРМАЛЬНЫЕ НАЗВАНИЯ ДАТЬ!!!!!!!!!!!!!!!
+//Site colors
 $darkPink: #55415f
 $lightPink: #9f81a9
+$footerPink: #9f80a9
 $primaryDark: #353535
-$footerDark: #222222
-$sliderBackground: #ebebeb
-$classicBlack: #000000
-$classicWhite: #ffffff
-$greyText: #999999
-$greyBorder: #ebebeb
 $linkColor: #333333
+$footerGrey: #3a3a3a
+$footerDark: #222222
+$classicBlack: #000000
 $sliderBackground: #ebebeb
+$classicWhite: #ffffff
+$greyBorder: #ebebeb
+$hrColor: #d7d7d7
 $paragraphColor: #807d77
 $h4Color: #7f7d77
-$footerPink: #9f80a9
+$greyText: #999999
 //Fonts
 @font-face
 	font-family: 'Georgia-Regular'
@@ -77,6 +78,8 @@ header
 		text-transform: capitalize
 		span
 			text-transform: uppercase
+.navigation-menu-hamburger
+	display: none
 .navigation-menu
 	position: absolute
 	bottom: 0
@@ -135,6 +138,9 @@ header
 	position: absolute
 	.monitor, .monitorImg
 		position: absolute
+	.monitor
+		width: 488px
+		height: 388px
 	.monitorImg
 		width: 448px
 		height: 250px
@@ -177,7 +183,7 @@ header
 				margin-left: 5px
 .slider-item	
 	display: none
-.slide //один для всех пока что !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.slide
 	.monitor
 		bottom: 6px
 		left: 20px
@@ -240,7 +246,7 @@ header
 		width: 100%
 		height: 1px
 		border: none
-		background-color: #d7d7d7
+		background-color: $hrColor
 .shout
 	width: 100%
 	height: 80px
@@ -280,10 +286,12 @@ header
 		font-size: 13px
 		text-decoration: none
 		text-transform: capitalize
+		color: $darkPink
 		&:hover
 			text-decoration: underline
 		i 
 			font-size: 8px
+//Footer
 footer
 	width: 100%
 	height: 336px
@@ -291,8 +299,8 @@ footer
 	hr
 		height: 0px
 		margin: 0px
-		border-top: 1px solid #000000
-		border-bottom: 1px solid #3a3a3a
+		border-top: 1px solid $classicBlack
+		border-bottom: 1px solid $footerGrey
 .footerContent
 	width: 960px
 	height: 274px
@@ -400,3 +408,160 @@ footer
 	justify-content: space-between
 	p
 		margin-top: 24px
+//Media
+@media screen and (min-width: 768px) and (max-width: 999px)
+	.topbar
+		width: 768px
+	.navigation
+		width: 748px
+	.navigation-menu-item
+		margin-left: 10px
+	.slider
+		width: 768px
+	.slide
+		width: 768px
+		.monitor
+			width: 448px
+			height: 348px
+			bottom: 11px
+		.monitorImg
+			width: 412px
+			height: 226px
+			bottom: 116px
+			left: 38px
+		article
+			width: 280px
+			h2
+				font-size: 30px
+				margin-top: 115px
+			p
+				width: 250px
+				margin-top: 10px
+				font-size: 15px
+				line-height: 20px
+	.services
+		width: 668px
+		height: 250px
+		.servicesContent
+			width: 32%
+			img
+				margin-top: 24px
+				margin-left: 78px
+			h3
+				margin: 10px 0
+			&:last-child
+				display: none
+	.mainContainer
+		width: 768px
+		height: 566px	
+		padding-top: 196px
+	.shout
+		height: 54px
+		padding-top: 10px
+		font-size: 15px
+	.latestWork
+		width: 728px
+		height: 300px
+		.latestWorkContent
+			width: 32%
+			h4
+				margin: 10px 0
+			img
+				width: 100%
+			&:last-child
+				display: none
+	.footerInfo
+		width: 32%
+		&:nth-child(2)
+			display: none
+	.footerContent, .footerCopyright
+		width: 728px
+@media screen and (min-width: 600px) and (max-width: 767px)
+	.topbar
+		width: 600px
+	header
+		padding: 0
+	.navigation
+		width: 560px
+	.navigation-logo
+		top: 10px
+		left: 15px
+	.navigation-menu-item
+		margin-left: 10px
+	.navigation-menu
+		bottom: -55px
+		right: 40px
+	.sliderBackground
+		height: 320px
+	.slider
+		width: 600px
+		height: 320px
+	.slide
+		width: 600px
+		.monitor
+			width: 308px
+			height: 228px
+			bottom: 26px
+		.monitorImg
+			width: 284px
+			height: 148px
+			bottom: 95px
+			left: 32px
+		article
+			width: 260px
+			h2
+				font-size: 22px
+				margin-top: 64px
+			p
+				width: 220px
+				margin-top: 10px
+				font-size: 12px
+				line-height: 16px
+			a
+				width: 110px
+				line-height: 25px
+				height: 25px
+				font-size: 12px
+	.services
+		width: 500px
+		height: 230px
+		.servicesContent
+			width: 32%
+			img
+				margin-top: 20px
+				margin-left: 48px
+			h3
+				font-size: 15px
+				margin: 10px 0
+			p
+				font-size: 12px
+				line-height: 17px
+			&:last-child
+				display: none
+	.mainContainer
+		width: 600px
+		height: 566px	
+		padding-top: 176px
+	.shout
+		height: 54px
+		padding: 10px
+		font-size: 13px
+	.latestWork
+		width: 540px
+		height: 300px
+		.latestWorkContent
+			width: 32%
+			h4
+				font-size: 15px
+				margin: 10px 0
+			img
+				width: 100%
+				height: 120px
+			&:last-child
+				display: none
+	.footerInfo
+		width: 32%
+		&:nth-child(2)
+			display: none
+	.footerContent, .footerCopyright
+		width: 540px

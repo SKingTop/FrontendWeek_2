@@ -69,6 +69,9 @@ header {
     .navigation-logo p span {
       text-transform: uppercase; }
 
+.navigation-menu-hamburger {
+  display: none; }
+
 .navigation-menu {
   position: absolute;
   bottom: 0;
@@ -143,6 +146,9 @@ header {
   position: absolute; }
   .slide .monitor, .slide .monitorImg {
     position: absolute; }
+  .slide .monitor {
+    width: 488px;
+    height: 388px; }
   .slide .monitorImg {
     width: 448px;
     height: 250px; }
@@ -325,7 +331,8 @@ header {
   .latestWorkContent a {
     font-size: 13px;
     text-decoration: none;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    color: #55415f; }
     .latestWorkContent a:hover {
       text-decoration: underline; }
     .latestWorkContent a i {
@@ -469,3 +476,161 @@ footer {
           justify-content: space-between; }
   .footerCopyright p {
     margin-top: 24px; }
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .topbar {
+    width: 768px; }
+  .navigation {
+    width: 748px; }
+  .navigation-menu-item {
+    margin-left: 10px; }
+  .slider {
+    width: 768px; }
+  .slide {
+    width: 768px; }
+    .slide .monitor {
+      width: 448px;
+      height: 348px;
+      bottom: 11px; }
+    .slide .monitorImg {
+      width: 412px;
+      height: 226px;
+      bottom: 116px;
+      left: 38px; }
+    .slide article {
+      width: 280px; }
+      .slide article h2 {
+        font-size: 30px;
+        margin-top: 115px; }
+      .slide article p {
+        width: 250px;
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 20px; }
+  .services {
+    width: 668px;
+    height: 250px; }
+    .services .servicesContent {
+      width: 32%; }
+      .services .servicesContent img {
+        margin-top: 24px;
+        margin-left: 78px; }
+      .services .servicesContent h3 {
+        margin: 10px 0; }
+      .services .servicesContent:last-child {
+        display: none; }
+  .mainContainer {
+    width: 768px;
+    height: 566px;
+    padding-top: 196px; }
+  .shout {
+    height: 54px;
+    padding-top: 10px;
+    font-size: 15px; }
+  .latestWork {
+    width: 728px;
+    height: 300px; }
+    .latestWork .latestWorkContent {
+      width: 32%; }
+      .latestWork .latestWorkContent h4 {
+        margin: 10px 0; }
+      .latestWork .latestWorkContent img {
+        width: 100%; }
+      .latestWork .latestWorkContent:last-child {
+        display: none; }
+  .footerInfo {
+    width: 32%; }
+    .footerInfo:nth-child(2) {
+      display: none; }
+  .footerContent, .footerCopyright {
+    width: 728px; } }
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .topbar {
+    width: 600px; }
+  header {
+    padding: 0; }
+  .navigation {
+    width: 560px; }
+  .navigation-logo {
+    top: 10px;
+    left: 15px; }
+  .navigation-menu-item {
+    margin-left: 10px; }
+  .navigation-menu {
+    bottom: -55px;
+    right: 40px; }
+  .sliderBackground {
+    height: 320px; }
+  .slider {
+    width: 600px;
+    height: 320px; }
+  .slide {
+    width: 600px; }
+    .slide .monitor {
+      width: 308px;
+      height: 228px;
+      bottom: 26px; }
+    .slide .monitorImg {
+      width: 284px;
+      height: 148px;
+      bottom: 95px;
+      left: 32px; }
+    .slide article {
+      width: 260px; }
+      .slide article h2 {
+        font-size: 22px;
+        margin-top: 64px; }
+      .slide article p {
+        width: 220px;
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 16px; }
+      .slide article a {
+        width: 110px;
+        line-height: 25px;
+        height: 25px;
+        font-size: 12px; }
+  .services {
+    width: 500px;
+    height: 230px; }
+    .services .servicesContent {
+      width: 32%; }
+      .services .servicesContent img {
+        margin-top: 20px;
+        margin-left: 48px; }
+      .services .servicesContent h3 {
+        font-size: 15px;
+        margin: 10px 0; }
+      .services .servicesContent p {
+        font-size: 12px;
+        line-height: 17px; }
+      .services .servicesContent:last-child {
+        display: none; }
+  .mainContainer {
+    width: 600px;
+    height: 566px;
+    padding-top: 176px; }
+  .shout {
+    height: 54px;
+    padding: 10px;
+    font-size: 13px; }
+  .latestWork {
+    width: 540px;
+    height: 300px; }
+    .latestWork .latestWorkContent {
+      width: 32%; }
+      .latestWork .latestWorkContent h4 {
+        font-size: 15px;
+        margin: 10px 0; }
+      .latestWork .latestWorkContent img {
+        width: 100%;
+        height: 120px; }
+      .latestWork .latestWorkContent:last-child {
+        display: none; }
+  .footerInfo {
+    width: 32%; }
+    .footerInfo:nth-child(2) {
+      display: none; }
+  .footerContent, .footerCopyright {
+    width: 540px; } }
