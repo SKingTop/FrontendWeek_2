@@ -628,7 +628,7 @@ footer {
         width: 100%;
         height: 120px; }
       .latestWork .latestWorkContent p {
-        font-size: 11px;
+        font-size: 12px;
         line-height: 15px; }
       .latestWork .latestWorkContent a {
         font-size: 12px; }
@@ -656,3 +656,139 @@ footer {
         margin-left: 8px; }
       .footerInfo .newsletterLink .fa-google-plus {
         margin-left: 7px; } }
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .topbar {
+    width: 480px; }
+    .topbar span {
+      font-size: 10px; }
+  .topbar-links {
+    font-size: 10px; }
+  header {
+    padding: 0; }
+  .navigation {
+    width: 440px; }
+  .navigation-logo {
+    top: 10px;
+    left: 0px; }
+  .navigation-menu-item {
+    margin-left: 14px;
+    font-size: 10px; }
+  .navigation-menu {
+    width: 440px;
+    bottom: -55px;
+    left: 0px; }
+  .sliderBackground {
+    height: 250px; }
+  .slider {
+    width: 480px;
+    height: 250px; }
+  .slide {
+    width: 480px; }
+    .slide .monitor {
+      width: 258px;
+      height: 178px;
+      bottom: 26px; }
+    .slide .monitorImg {
+      width: 238px;
+      height: 115px;
+      bottom: 80px;
+      left: 30px; }
+    .slide article {
+      width: 200px; }
+      .slide article h2 {
+        font-size: 20px;
+        margin-top: 60px; }
+      .slide article p {
+        width: 180px;
+        margin-top: 10px;
+        font-size: 11px;
+        line-height: 12px; }
+      .slide article a {
+        width: 90px;
+        line-height: 25px;
+        height: 25px;
+        font-size: 10px;
+        margin-top: 10px; }
+  .prevBtn, .nextBtn {
+    height: 39px;
+    padding: 5px; }
+  .services {
+    width: 380px;
+    height: 250px;
+    top: -40px; }
+    .services .servicesContent {
+      width: 48%; }
+      .services .servicesContent img {
+        margin-top: 20px;
+        margin-left: 59px; }
+      .services .servicesContent h3 {
+        font-size: 15px;
+        margin: 10px 0; }
+      .services .servicesContent p {
+        font-size: 12px;
+        line-height: 17px; }
+      .services .servicesContent:nth-child(3) {
+        display: none; }
+      .services .servicesContent:last-child {
+        display: none; }
+  .mainContainer {
+    width: 480px;
+    height: 540px;
+    padding-top: 210px; }
+  .shout {
+    height: 60px;
+    padding: 10px;
+    font-size: 13px; }
+    .shout p {
+      line-height: 15px; }
+  .latestWork {
+    width: 440px;
+    height: 270px; }
+    .latestWork .latestWorkContent {
+      width: 48%; }
+      .latestWork .latestWorkContent h4 {
+        font-size: 15px;
+        margin: 10px 0; }
+      .latestWork .latestWorkContent img {
+        width: 100%;
+        height: 120px; }
+      .latestWork .latestWorkContent p {
+        font-size: 12px;
+        line-height: 15px; }
+      .latestWork .latestWorkContent a {
+        width: 90px;
+        line-height: 25px;
+        height: 25px;
+        font-size: 10px; }
+      .latestWork .latestWorkContent:nth-child(3) {
+        display: none; }
+      .latestWork .latestWorkContent:last-child {
+        display: none; }
+  footer {
+    height: 286px; }
+  .footerContent {
+    height: 224px; }
+  .footerCopyright p {
+    font-size: 11px; }
+  .footerContent, .footerCopyright {
+    width: 440px; }
+  .footerInfo {
+    width: 48%; }
+    .footerInfo h4 {
+      font-size: 15px;
+      margin: 15px 0; }
+    .footerInfo:first-child {
+      display: none; }
+    .footerInfo:nth-child(2) {
+      display: none; }
+    .footerInfo .newsletterLink {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px; }
+      .footerInfo .newsletterLink i {
+        font-size: 12px;
+        margin-top: 9px;
+        margin-left: 10px; }
+      .footerInfo .newsletterLink .fa-google-plus {
+        margin-left: 8px; } }
