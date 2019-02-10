@@ -558,8 +558,9 @@ footer {
   .navigation-menu-item {
     margin-left: 10px; }
   .navigation-menu {
+    width: 488px;
     bottom: -55px;
-    right: 40px; }
+    left: 15px; }
   .sliderBackground {
     height: 320px; }
   .slider {
@@ -609,7 +610,7 @@ footer {
         display: none; }
   .mainContainer {
     width: 600px;
-    height: 566px;
+    height: 500px;
     padding-top: 176px; }
   .shout {
     height: 54px;
@@ -617,7 +618,7 @@ footer {
     font-size: 13px; }
   .latestWork {
     width: 540px;
-    height: 300px; }
+    height: 270px; }
     .latestWork .latestWorkContent {
       width: 32%; }
       .latestWork .latestWorkContent h4 {
@@ -626,11 +627,32 @@ footer {
       .latestWork .latestWorkContent img {
         width: 100%;
         height: 120px; }
+      .latestWork .latestWorkContent p {
+        font-size: 11px;
+        line-height: 15px; }
+      .latestWork .latestWorkContent a {
+        font-size: 12px; }
       .latestWork .latestWorkContent:last-child {
         display: none; }
+  .footerContent, .footerCopyright {
+    width: 540px; }
   .footerInfo {
     width: 32%; }
+    .footerInfo h4 {
+      font-size: 15px;
+      margin: 15px 0; }
+    .footerInfo:first-child p {
+      width: 160px;
+      line-height: 15px; }
     .footerInfo:nth-child(2) {
       display: none; }
-  .footerContent, .footerCopyright {
-    width: 540px; } }
+    .footerInfo .newsletterLink {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px; }
+      .footerInfo .newsletterLink i {
+        font-size: 12px;
+        margin-top: 7px;
+        margin-left: 8px; }
+      .footerInfo .newsletterLink .fa-google-plus {
+        margin-left: 7px; } }
