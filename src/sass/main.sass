@@ -97,7 +97,7 @@ header
 	color: $linkColor
 	vertical-align: center
 	&:hover
-		border-bottom: 1px solid $darkPink
+		border-bottom: 2px solid $darkPink
 		color: $darkPink
 	&:nth-child(1)
 		margin-left: 0px
@@ -297,10 +297,11 @@ footer
 	height: 336px
 	background-color: $footerDark
 	hr
-		height: 0px
+		height: 1px
 		margin: 0px
+		border: none
 		border-top: 1px solid $classicBlack
-		border-bottom: 1px solid $footerGrey
+		background-color: $footerGrey
 .footerContent
 	width: 960px
 	height: 274px
@@ -408,7 +409,7 @@ footer
 	justify-content: space-between
 	p
 		margin-top: 24px
-//Media
+//Media 768px - 999px
 @media screen and (min-width: 768px) and (max-width: 999px)
 	.topbar
 		width: 768px
@@ -573,8 +574,12 @@ footer
 		h4
 			font-size: 15px
 			margin: 15px 0
+		&:first-child
+			width: 29%
+		&:nth-child(3)
+			width: 35%
 		&:first-child p
-			width: 160px
+			width: 100%
 			line-height: 15px
 		&:nth-child(2)
 			display: none
@@ -725,6 +730,179 @@ footer
 				margin-left: 10px
 			.fa-google-plus
 				margin-left: 8px
-// @media screen and (min-width: 320px) and (max-width: 479px)
-// 	*
-// 		display: none
+@media screen and (min-width: 320px) and (max-width: 479px)
+	.topbar
+		width: 320px
+		span
+			font-size: 10px
+	.topbar-links
+		font-size: 7.5px
+		span
+			font-size: 8px
+	header
+		padding: 0
+		height: 100px
+	.navigation
+		width: 300px
+		height: 95%
+	.navigation-logo
+		top: 10px
+		left: 0px
+		h1
+			font-size: 26px
+			span
+				font-size: 16px
+		p
+			font-size: 10px
+			margin: 0
+	.navigation-menu-item
+		margin-left: 1px
+		height: 31px
+		font-size:  7.5px
+	.navigation-menu
+		width: 289px
+		height: 31px
+		bottom: 0px	
+		left: 0px
+	.sliderBackground
+		//display: none //////////////////////////////////////////////////////////
+		height: 200px
+	.slider
+		width: 320px
+		height: 200px
+	.slide
+		width: 320px
+		.monitor
+			width: 158px
+			height: 125px
+			bottom: 30px
+		.monitorImg
+			width: 146px
+			height: 81px
+			bottom: 68px
+			left: 26px
+		article
+			width: 320px
+			h2
+				font-size: 20px
+				text-align: center
+				margin-top: 12px
+				margin-left: 0
+			p
+				width: 122px
+				margin-top: 10px
+				margin-left: 188px
+				font-size: 8px
+				line-height: 12px
+			a
+				width: 70px
+				line-height: 17px
+				height: 17px
+				font-size: 8px
+				margin-top: 5px
+				margin-left: 188px
+				i
+					font-size: 7px
+	.prevBtn, .nextBtn 
+		height: 39px
+		padding: 5px
+	.services
+		//display: none //////////////////////////////////////////////////////////
+		width: 220px
+		height: 436px
+		top: -40px
+		left: 50px
+		flex-direction: column
+		.servicesContent
+			width: 100%
+			img
+				margin-top: 20px
+				margin-left: 78px
+			h3
+				font-size: 15px
+				margin: 10px 0
+			p
+				font-size: 12px
+				line-height: 17px
+			&:nth-child(3)
+				display: none
+			&:last-child
+				display: none
+	.mainContainer
+		//display: none //////////////////////////////////////////////////////////
+		width: 320px
+		height: 970px	
+		padding-top: 396px
+	.shout
+		//display: none
+		height: 60px
+		padding: 10px
+		font-size: 13px
+		margin-bottom: 15px
+		p
+			line-height: 15px
+	.latestWork
+		// display: none
+		width: 320px
+		height: 270px
+		flex-direction: column
+		.latestWorkContent
+			margin: 0px auto 
+			width: 80%
+			h4
+				font-size: 15px
+				margin: 10px 0
+			img
+				width: 100%
+				height: 120px
+			p
+				font-size: 12px
+				line-height: 15px
+			a 
+				width: 90px
+				line-height: 25px
+				height: 25px
+				font-size: 10px
+			&:nth-child(3)
+				display: none
+			&:last-child
+				display: none
+	footer
+		// display: none //////////////////////////////////////////////////////////
+		height: 505px
+	.footerContent
+		width: 320px
+		height: 443px	
+		flex-direction: column
+	.footerCopyright
+		height: 60px
+		p
+			font-size: 11px
+	.footerCopyright
+		width: 320px
+		display: flex
+		justify-content: center
+		p
+			font-size: 10px
+			&:last-child
+				display: none
+	.footerInfo
+		width: 80%
+		margin: auto
+		h4
+			font-size: 15px
+			margin: 15px 0
+		&:first-child
+			display: none
+		&:nth-child(2)
+			display: none
+		.newsletterLink
+			width: 30px
+			height: 30px
+			margin-right: 8px
+			i
+				font-size: 12px
+				margin-top: 9px
+				margin-left: 10px
+			.fa-google-plus
+				margin-left: 8px
