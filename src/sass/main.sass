@@ -22,10 +22,6 @@ $greyText: #999999
 	font-family: (Georgia-Regular), (Arial)
 //HTML styles
 //topbar styles
-.topbar-container
-	width: 100%
-	height: 30px
-	background-color: $darkPink
 .topbar 
 	width: 1000px
 	height: 30px
@@ -36,30 +32,34 @@ $greyText: #999999
 	box-sizing: border-box
 	span 
 		color: $classicWhite
-.topbar-links
-	box-sizing: border-box
-	display: inline-block
-	text-decoration: none
+	&__background
+	width: 100%
 	height: 30px
-	color: $classicWhite
-	font-size: 11px
-	padding: 9px 4px 0px 4px
-	margin: 0
-	&:hover
-		text-decoration: underline
-//header styles
-header
+	background-color: $darkPink
+	&__link
+		box-sizing: border-box
+		display: inline-block
+		text-decoration: none
+		height: 30px
+		color: $classicWhite
+		font-size: 11px
+		padding: 9px 4px 0px 4px
+		margin: 0
+		&:hover
+			text-decoration: underline
+//.header styles
+.header
 	width: 100%
 	height: 130px
 	box-sizing: border-box
 	padding-top: 30px
 	background-color: $classicWhite
-.navigation
-	width: 961px
-	height: 66px
-	margin: 0 auto
-	position: relative
-.navigation-logo
+	&__navigation
+		width: 961px
+		height: 66px
+		margin: 0 auto
+		position: relative
+.navigation__logo
 	position: absolute
 	top: 0
 	left: 0
@@ -78,14 +78,12 @@ header
 		text-transform: capitalize
 		span
 			text-transform: uppercase
-.navigation-menu-hamburger
-	display: none
-.navigation-menu
+.navigation__menu
 	position: absolute
 	bottom: 0
 	right: 0
 	border-bottom: 1px solid $greyBorder
-.navigation-menu-item
+.menu__item
 	box-sizing: border-box
 	display: inline-block
 	text-decoration: none
@@ -102,10 +100,6 @@ header
 	&:nth-child(1)
 		margin-left: 0px
 //slider styles
-.sliderBackground
-	width: 100%
-	height: 450px
-	background-color: $sliderBackground
 .slider
 	width: 1000px
 	height: 100%
@@ -114,34 +108,45 @@ header
 	top: 0
 	left: 0
 	right: 0
-.prevBtn, .nextBtn 
-	position: absolute
-	bottom: 1px
-	width: 29px
-	height: 53px
-	background-color: $classicWhite
-	box-sizing: border-box
-	padding-top: 12px
-	cursor: pointer
-	color: $darkPink
-	display: flex
-	justify-content: center
-.prevBtn
-	left: 20px
-	border-top-left-radius: 10px
-.nextBtn
-	right: 20px
-	border-top-right-radius: 10px
-.slide
+	&__background
+		width: 100%
+		height: 450px
+		background-color: $sliderBackground
+	&__prev_btn, &__next_btn 
+		position: absolute
+		bottom: 1px
+		width: 29px
+		height: 53px
+		background-color: $classicWhite
+		box-sizing: border-box
+		padding-top: 12px
+		cursor: pointer
+		color: $darkPink
+		display: flex
+		justify-content: center
+	&__prev_btn
+		left: 20px
+		border-top-left-radius: 10px
+	&__next_btn
+		right: 20px
+		border-top-right-radius: 10px
+	&__item	
+		display: none
+	&__item.current
+		display: block
+.slide //global for all slide's
 	width: 100%
 	height: 100%
 	position: absolute
-	.monitor, .monitorImg
+	.monitor, .monitor__img
 		position: absolute
+		img 
+			width: 100%
+			height: 100%
 	.monitor
 		width: 488px
 		height: 388px
-	.monitorImg
+	.monitor__img
 		width: 448px
 		height: 250px
 	article
@@ -181,13 +186,11 @@ header
 			i 
 				font-size: 12px
 				margin-left: 5px
-.slider-item	
-	display: none
 .slide
 	.monitor
 		bottom: 6px
 		left: 20px
-	.monitorImg
+	.monitor__img
 		bottom: 124px
 		left: 40px
 	article
@@ -201,10 +204,8 @@ header
 		a
 			margin-top: 20px
 			margin-left: 15px
-.slider-item.current
-	display: block
-//mainContainer styles
-.mainContainer
+//wrapper styles
+.wrapper
 	width: 1000px
 	height: 647px
 	margin: 0px auto
@@ -221,32 +222,32 @@ header
 	background-color: $classicWhite
 	display: flex
 	justify-content: space-between
-.servicesContent
-	height: 100%
-	width: 210px
-	box-sizing: border-box
-	flex-direction: column
-	img
-		width: 64px
-		height: 64px
-		margin-top: 30px
-		margin-left: 73px
-	h3
-		font-size: 18px
-		margin-top: 20px
-		text-align: center
-		color: $darkPink
-	p
-		color: $paragraphColor
-		font-size: 13px
-		text-align: center
-		line-height: 20px
-		width: 95%
-	hr
-		width: 100%
-		height: 1px
-		border: none
-		background-color: $hrColor
+	&__item
+		height: 100%
+		width: 210px
+		box-sizing: border-box
+		flex-direction: column
+		.services__img
+			width: 64px
+			height: 64px	
+			padding-top: 30px
+			padding-left: 73px
+		h3
+			font-size: 18px
+			margin-top: 20px
+			text-align: center
+			color: $darkPink
+		p
+			color: $paragraphColor
+			font-size: 13px
+			text-align: center
+			line-height: 20px
+			width: 95%
+		hr
+			width: 100%
+			height: 1px
+			border: none
+			background-color: $hrColor
 .shout
 	width: 100%
 	height: 80px
@@ -265,34 +266,34 @@ header
 	margin: 0px auto
 	display: flex
 	justify-content: space-between
-.latestWorkContent
-	height: 100%
-	width: 225px
-	box-sizing: border-box
-	flex-direction: column
-	h4
-		font-size: 18px
-		color: $h4Color
-		font-weight: normal
-		margin: 20px 0px
-	img
+	&__item
+		height: 100%
 		width: 225px
-		height: 140px
-	p
-		color: $paragraphColor
-		font-size: 13px	
-		line-height: 20px
-	a
-		font-size: 13px
-		text-decoration: none
-		text-transform: capitalize
-		color: $darkPink
-		&:hover
-			text-decoration: underline
-		i 
-			font-size: 8px
-//Footer styles
-footer
+		box-sizing: border-box
+		flex-direction: column
+		h4
+			font-size: 18px
+			color: $h4Color
+			font-weight: normal
+			margin: 20px 0px
+		.latestWork__img
+			width: 225px
+			height: 140px
+		p
+			color: $paragraphColor
+			font-size: 13px	
+			line-height: 20px
+		a
+			font-size: 13px
+			text-decoration: none
+			text-transform: capitalize
+			color: $darkPink
+			&:hover
+				text-decoration: underline
+			i 
+				font-size: 8px
+//.footer styles
+.footer
 	width: 100%
 	height: 336px
 	background-color: $footerDark
@@ -302,13 +303,23 @@ footer
 		border: none
 		border-top: 1px solid $classicBlack
 		background-color: $footerGrey
-.footerContent
-	width: 960px
-	height: 274px
-	margin: 0px auto
-	display: flex
-	justify-content: space-between
-.footerInfo
+	&__container
+		width: 960px
+		height: 274px
+		margin: 0px auto
+		display: flex
+		justify-content: space-between
+	&__copyright
+		width: 960px
+		height: 60px
+		margin: 0px auto
+		font-size: 12px
+		color: $paragraphColor
+		display: flex
+		justify-content: space-between
+		p
+			margin-top: 24px
+.container__item
 	width: 25%
 	height: 100%
 	h4
@@ -368,7 +379,7 @@ footer
 			box-shadow: 0 0 15px $lightPink
 		&:active
 			background-color: $darkPink
-	.newsletterLink
+	.newsletter__link
 		width: 32px
 		height: 32px
 		border-radius: 50%
@@ -397,25 +408,15 @@ footer
 			margin-top: 15px
 			width: 224px
 	&:nth-child(3)
-		span
+		a
 			color: $lightPink
-.footerCopyright
-	width: 960px
-	height: 60px
-	margin: 0px auto
-	font-size: 12px
-	color: $paragraphColor
-	display: flex
-	justify-content: space-between
-	p
-		margin-top: 24px
-//Media styles width (768px - 999px) 
+//Media styles width (768px - 999px) ////////////////////////////БЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭМ///////////////
 @media screen and (min-width: 768px) and (max-width: 999px)
 	.topbar
 		width: 768px
-	.navigation
+	.header__navigation
 		width: 748px
-	.navigation-menu-item
+	.menu__item
 		margin-left: 10px
 	.slider
 		width: 768px
@@ -425,7 +426,7 @@ footer
 			width: 448px
 			height: 348px
 			bottom: 11px
-		.monitorImg
+		.monitor__img
 			width: 412px
 			height: 226px
 			bottom: 116px
@@ -443,7 +444,7 @@ footer
 	.services
 		width: 668px
 		height: 250px
-		.servicesContent
+		.services__item
 			width: 32%
 			img
 				margin-top: 24px
@@ -452,7 +453,7 @@ footer
 				margin: 10px 0
 			&:last-child
 				display: none
-	.mainContainer
+	.wrapper
 		width: 768px
 		height: 566px	
 		padding-top: 196px
@@ -463,7 +464,7 @@ footer
 	.latestWork
 		width: 728px
 		height: 300px
-		.latestWorkContent
+		.latestWork__item
 			width: 32%
 			h4
 				margin: 10px 0
@@ -471,30 +472,30 @@ footer
 				width: 100%
 			&:last-child
 				display: none
-	.footerInfo
+	.container__item
 		width: 32%
 		&:nth-child(2)
 			display: none
-	.footerContent, .footerCopyright
+	.footer__container, .footer__copyright
 		width: 728px
 //Media styles width (600px - 767px)
 @media screen and (min-width: 600px) and (max-width: 767px)
 	.topbar
 		width: 600px
-	header
+	.header
 		padding: 0
-	.navigation
+	.header__navigation
 		width: 560px
-	.navigation-logo
+	.navigation__logo
 		top: 10px
 		left: 15px
-	.navigation-menu-item
+	.menu__item
 		margin-left: 10px
-	.navigation-menu
+	.navigation__menu
 		width: 488px
 		bottom: -55px
 		left: 15px
-	.sliderBackground
+	.slider__background
 		height: 320px
 	.slider
 		width: 600px
@@ -505,7 +506,7 @@ footer
 			width: 308px
 			height: 228px
 			bottom: 26px
-		.monitorImg
+		.monitor__img
 			width: 284px
 			height: 148px
 			bottom: 95px
@@ -528,7 +529,7 @@ footer
 	.services
 		width: 500px
 		height: 230px
-		.servicesContent
+		.services__item
 			width: 32%
 			img
 				margin-top: 20px
@@ -541,7 +542,7 @@ footer
 				line-height: 17px
 			&:last-child
 				display: none
-	.mainContainer
+	.wrapper
 		width: 600px
 		height: 500px	
 		padding-top: 176px
@@ -552,7 +553,7 @@ footer
 	.latestWork
 		width: 540px
 		height: 270px
-		.latestWorkContent
+		.latestWork__item
 			width: 32%
 			h4
 				font-size: 15px
@@ -567,9 +568,9 @@ footer
 				font-size: 12px
 			&:last-child
 				display: none
-	.footerContent, .footerCopyright
+	.footer__container, .footer__copyright
 		width: 540px
-	.footerInfo
+	.container__item
 		width: 32%
 		h4
 			font-size: 15px
@@ -583,7 +584,7 @@ footer
 			line-height: 15px
 		&:nth-child(2)
 			display: none
-		.newsletterLink
+		.newsletter__link
 			width: 25px
 			height: 25px
 			margin-right: 5px
@@ -599,23 +600,23 @@ footer
 		width: 480px
 		span
 			font-size: 10px
-	.topbar-links
+	.topbar__link
 		font-size: 10px
-	header
+	.header
 		padding: 0
-	.navigation
+	.header__navigation
 		width: 440px
-	.navigation-logo
+	.navigation__logo
 		top: 10px
 		left: 0px
-	.navigation-menu-item
+	.menu__item
 		margin-left: 14px
 		font-size:  10px
-	.navigation-menu
+	.navigation__menu
 		width: 440px
 		bottom: -55px	
 		left: 0px
-	.sliderBackground
+	.slider__background
 		height: 250px
 	.slider
 		width: 480px
@@ -626,7 +627,7 @@ footer
 			width: 258px
 			height: 178px
 			bottom: 26px
-		.monitorImg
+		.monitor__img
 			width: 238px
 			height: 115px
 			bottom: 80px
@@ -647,14 +648,14 @@ footer
 				height: 25px
 				font-size: 10px
 				margin-top: 10px
-	.prevBtn, .nextBtn 
+	.slider__prev_btn, .slider__next_btn 
 		height: 39px
 		padding: 5px
 	.services
 		width: 380px
 		height: 250px
 		top: -40px
-		.servicesContent
+		.services__item
 			width: 48%
 			img
 				margin-top: 20px
@@ -669,7 +670,7 @@ footer
 				display: none
 			&:last-child
 				display: none
-	.mainContainer
+	.wrapper
 		width: 480px
 		height: 540px	
 		padding-top: 210px
@@ -682,7 +683,7 @@ footer
 	.latestWork
 		width: 440px
 		height: 270px
-		.latestWorkContent
+		.latestWork__item
 			width: 48%
 			h4
 				font-size: 15px
@@ -702,16 +703,16 @@ footer
 				display: none
 			&:last-child
 				display: none
-	footer
+	.footer
 		height: 286px
-	.footerContent
+	.footer__container
 		height: 224px	
-	.footerCopyright
+	.footer__copyright
 		p
 			font-size: 11px
-	.footerContent, .footerCopyright
+	.footer__container, .footer__copyright
 		width: 440px
-	.footerInfo
+	.container__item
 		width: 48%
 		h4
 			font-size: 15px
@@ -720,7 +721,7 @@ footer
 			display: none
 		&:nth-child(2)
 			display: none
-		.newsletterLink
+		.newsletter__link
 			width: 30px
 			height: 30px
 			margin-right: 8px
@@ -736,17 +737,17 @@ footer
 		width: 320px
 		span
 			font-size: 10px
-	.topbar-links
+	.topbar__link
 		font-size: 7.5px
 		span
 			font-size: 8px
-	header
+	.header
 		padding: 0
 		height: 100px
-	.navigation
+	.header__navigation
 		width: 300px
 		height: 95%
-	.navigation-logo
+	.navigation__logo
 		top: 10px
 		left: 0px
 		h1
@@ -756,16 +757,16 @@ footer
 		p
 			font-size: 10px
 			margin: 0
-	.navigation-menu-item
+	.menu__item
 		margin-left: 1px
 		height: 31px
 		font-size:  7.5px
-	.navigation-menu
+	.navigation__menu
 		width: 289px
 		height: 31px
 		bottom: 0px	
 		left: 0px
-	.sliderBackground
+	.slider__background
 		height: 200px
 	.slider
 		width: 320px
@@ -776,7 +777,7 @@ footer
 			width: 158px
 			height: 125px
 			bottom: 30px
-		.monitorImg
+		.monitor__img
 			width: 146px
 			height: 81px
 			bottom: 68px
@@ -803,7 +804,7 @@ footer
 				margin-left: 188px
 				i
 					font-size: 7px
-	.prevBtn, .nextBtn 
+	.slider__prev_btn, .slider__next_btn 
 		height: 39px
 		padding: 5px
 	.services
@@ -812,7 +813,7 @@ footer
 		top: -40px
 		left: 50px
 		flex-direction: column
-		.servicesContent
+		.services__item
 			width: 100%
 			img
 				margin-top: 20px
@@ -827,7 +828,7 @@ footer
 				display: none
 			&:last-child
 				display: none
-	.mainContainer
+	.wrapper
 		width: 320px
 		height: 970px	
 		padding-top: 396px
@@ -842,7 +843,7 @@ footer
 		width: 320px
 		height: 270px
 		flex-direction: column
-		.latestWorkContent
+		.latestWork__item
 			margin: 0px auto 
 			width: 80%
 			h4
@@ -863,17 +864,17 @@ footer
 				display: none
 			&:last-child
 				display: none
-	footer
+	.footer
 		height: 505px
-	.footerContent
+	.footer__container
 		width: 320px
 		height: 443px	
 		flex-direction: column
-	.footerCopyright
+	.footer__copyright
 		height: 60px
 		p
 			font-size: 11px
-	.footerCopyright
+	.footer__copyright
 		width: 320px
 		display: flex
 		justify-content: center
@@ -881,7 +882,7 @@ footer
 			font-size: 10px
 			&:last-child
 				display: none
-	.footerInfo
+	.container__item
 		width: 80%
 		margin: auto
 		h4
@@ -891,7 +892,7 @@ footer
 			display: none
 		&:nth-child(2)
 			display: none
-		.newsletterLink
+		.newsletter__link
 			width: 30px
 			height: 30px
 			margin-right: 8px

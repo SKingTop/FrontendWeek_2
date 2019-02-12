@@ -1,26 +1,26 @@
 $(document).ready(function(){
 
-    $('.nextBtn').click(function(){
-      var currentSlide = $('.slider-item.current');
-      var currentSlideIndex = $('.slider-item.current').index();
+    $('.slider__next_btn').click(function(){
+      var currentSlide = $('.slider__item.current');
+      var currentSlideIndex = $('.slider__item.current').index();
       var nextSlideIndex = currentSlideIndex + 1;
-      var nextSlide = $('.slider-item').eq(nextSlideIndex);
+      var nextSlide = $('.slider__item').eq(nextSlideIndex);
       currentSlide.fadeOut(1000);
       currentSlide.removeClass('current');
 
-      if(nextSlideIndex == ($('.slider-item:last').index() + 1 )) {
-        $('.slider-item').eq(0).fadeIn(1000);
-        $('.slider-item').eq(0).addClass('current');
+      if(nextSlideIndex == ($('.slider__item:last').index() + 1 )) {
+        $('.slider__item').eq(0).fadeIn(1000);
+        $('.slider__item').eq(0).addClass('current');
       } else {
         nextSlide.fadeIn(1000);
         nextSlide.addClass('current');
       }
     });
-    $('.prevBtn').click(function(){
-      var currentSlide = $('.slider-item.current');
-      var currentSlideIndex = $('.slider-item.current').index();
+    $('.slider__prev_btn').click(function(){
+      var currentSlide = $('.slider__item.current');
+      var currentSlideIndex = $('.slider__item.current').index();
       var prevSlideIndex = currentSlideIndex - 1;
-      var prevSlide = $('.slider-item').eq(prevSlideIndex);
+      var prevSlide = $('.slider__item').eq(prevSlideIndex);
 
       currentSlide.fadeOut(1000);
       currentSlide.removeClass('current');
