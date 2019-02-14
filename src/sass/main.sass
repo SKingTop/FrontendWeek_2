@@ -22,6 +22,10 @@ $greyText: #999999
 	font-family: (Georgia-Regular), (Arial)
 //HTML styles
 //topbar styles
+.topbar__background
+	width: 100%
+	height: 30px
+	background-color: $darkPink
 .topbar 
 	width: 1000px
 	height: 30px
@@ -32,10 +36,6 @@ $greyText: #999999
 	box-sizing: border-box
 	span 
 		color: $classicWhite
-	&__background
-	width: 100%
-	height: 30px
-	background-color: $darkPink
 	&__link
 		box-sizing: border-box
 		display: inline-block
@@ -242,9 +242,10 @@ $greyText: #999999
 			background-color: $hrColor
 .shout
 	width: 100%
-	height: 80px
+	height: auto
 	text-align: center
 	font-size: 18px
+	line-height: 25px
 	box-sizing: border-box
 	padding: 0px 50px
 	padding-top: 20px
@@ -350,7 +351,7 @@ $greyText: #999999
 			color: $paragraphColor
 		p
 			margin-top: 15px
-			width: 224px
+			width: 95%
 	&:nth-child(3)
 		a
 			color: $lightPink
@@ -403,14 +404,14 @@ $greyText: #999999
 		color: $paragraphColor
 	.fa-google-plus
 		margin-left: 7px
-//Media styles
+//Media styles (768px - 999px) //Media styles//Media styles//Media styles//Media styles//Media styles//Media styles/
 @media (max-width: 999px)
 	.topbar
 		width: 768px
 	.header__navigation
 		width: 748px
-	.menu__item
-		margin-left: 10px
+	.navigation__menu
+		display: none
 	.slider
 		width: 768px
 		&__slide
@@ -437,28 +438,30 @@ $greyText: #999999
 				line-height: 20px
 	.services
 		width: 668px
-		height: 250px
+		height: auto
 		flex-wrap: wrap
 		&__item
 			width: 48%
+			height: auto
 			h3
 				margin: 10px 0
 	.wrapper
 		width: 768px
-		height: 1300px	
+		height: auto
 		padding-top: 455px
 	.shout
-		height: 54px
 		padding-top: 10px
 		font-size: 15px
+		line-height: 20px
 	.latestWork
 		width: 728px
 		height: auto
 		flex-wrap: wrap
+		padding-bottom: 20px	
 		.latestWork__item
 			width: 48%
 			height: 100%
-			padding: 20px 0px
+			padding: 10px 0px
 			h4
 				margin: 10px 0
 			img
@@ -473,422 +476,243 @@ $greyText: #999999
 	.footer__container, .footer__copyright
 		width: 728px
 //Media styles width (600px - 767px)
-// @media screen and (min-width: 600px) and (max-width: 767px)
-// 	.topbar
-// 		width: 600px
-// 	.header
-// 		padding: 0
-// 		&__navigation
-// 			width: 560px
-// 	.navigation__logo
-// 		top: 10px
-// 		left: 15px
-// 	.menu__item
-// 		margin-left: 10px
-// 	.navigation__menu
-// 		width: 488px
-// 		bottom: -55px
-// 		left: 15px
-// 	.slider__background
-// 		height: 320px
-// 	.slider
-// 		width: 600px
-// 		height: 320px
-// 	.slide
-// 		width: 600px
-// 		&_monitor
-// 			width: 308px
-// 			height: 228px
-// 			bottom: 26px
-// 			&__img
-// 				width: 284px
-// 				height: 148px
-// 				bottom: 95px
-// 				left: 32px
-// 		&_text
-// 			width: 260px
-// 			h2
-// 				font-size: 22px
-// 				margin-top: 64px
-// 			p
-// 				width: 220px
-// 				margin-top: 10px
-// 				font-size: 12px
-// 				line-height: 16px
-// 			a
-// 				width: 110px
-// 				line-height: 25px
-// 				height: 25px
-// 				font-size: 12px
-// 	.services
-// 		width: 500px
-// 		height: 230px
-// 		.services__item
-// 			width: 48%
-// 			.services__item_img
-// 				margin-top: 20px
-// 				margin-left: 48px
-// 			h3
-// 				font-size: 15px
-// 				margin: 10px 0
-// 			p
-// 				font-size: 12px
-// 				line-height: 17px
-// 	.wrapper
-// 		width: 600px
-// 		height: 500px	
-// 		padding-top: 176px
-// 	.shout
-// 		height: 54px
-// 		padding: 10px
-// 		font-size: 13px
-// 	.latestWork
-// 		width: 540px
-// 		height: 270px
-// 		.latestWork__item
-// 			width: 48%
-// 			h4
-// 				font-size: 15px
-// 				margin: 10px 0
-// 			.services__item_img
-// 				width: 100%
-// 				height: 120px
-// 			p
-// 				font-size: 12px
-// 				line-height: 15px
-// 			a 
-// 				font-size: 12px
-// 	.footer__container, .footer__copyright
-// 		width: 540px
-// 	.container__item
-// 		width: 32%
-// 		h4
-// 			font-size: 15px
-// 			margin: 15px 0
-// 		&:first-child
-// 			width: 29%
-// 		&:nth-child(3)
-// 			width: 35%
-// 		&:first-child p
-// 			width: 100%
-// 			line-height: 15px
-// 		&:nth-child(2)
-// 			display: none
-// 		.newsletter__link
-// 			width: 25px
-// 			height: 25px
-// 			margin-right: 5px
-// 			i
-// 				font-size: 12px
-// 				margin-top: 7px
-// 				margin-left: 8px
-// 			.fa-google-plus
-// 				margin-left: 7px
-// //Media styles width (480px - 599px)
-// @media screen and (min-width: 480px) and (max-width: 599px)
-// 	.topbar
-// 		width: 480px
-// 		span
-// 			font-size: 10px
-// 	.topbar__link
-// 		font-size: 10px
-// 	.header
-// 		padding: 0
-// 	.header__navigation
-// 		width: 440px
-// 	.navigation__logo
-// 		top: 10px
-// 		left: 0px
-// 	.menu__item
-// 		margin-left: 14px
-// 		font-size:  10px
-// 	.navigation__menu
-// 		width: 440px
-// 		bottom: -55px	
-// 		left: 0px
-// 	.slider__background
-// 		height: 250px
-// 	.slider
-// 		width: 480px
-// 		height: 250px
-// 	.slide
-// 		width: 480px
-// 		.monitor
-// 			width: 258px
-// 			height: 178px
-// 			bottom: 26px
-// 		.monitor__img
-// 			width: 238px
-// 			height: 115px
-// 			bottom: 80px
-// 			left: 30px
-// 		article
-// 			width: 200px
-// 			h2
-// 				font-size: 20px
-// 				margin-top: 60px
-// 			p
-// 				width: 180px
-// 				margin-top: 10px
-// 				font-size: 11px
-// 				line-height: 12px
-// 			a
-// 				width: 90px
-// 				line-height: 25px
-// 				height: 25px
-// 				font-size: 10px
-// 				margin-top: 10px
-// 	.slider__prev_btn, .slider__next_btn 
-// 		height: 39px
-// 		padding: 5px
-// 	.services
-// 		width: 380px
-// 		height: 250px
-// 		top: -40px
-// 		.services__item
-// 			width: 48%
-// 			img
-// 				margin-top: 20px
-// 				margin-left: 59px
-// 			h3
-// 				font-size: 15px
-// 				margin: 10px 0
-// 			p
-// 				font-size: 12px
-// 				line-height: 17px
-// 			&:nth-child(3)
-// 				display: none
-// 			&:last-child
-// 				display: none
-// 	.wrapper
-// 		width: 480px
-// 		height: 540px	
-// 		padding-top: 210px
-// 	.shout
-// 		height: 60px
-// 		padding: 10px
-// 		font-size: 13px
-// 		p
-// 			line-height: 15px
-// 	.latestWork
-// 		width: 440px
-// 		height: 270px
-// 		.latestWork__item
-// 			width: 48%
-// 			h4
-// 				font-size: 15px
-// 				margin: 10px 0
-// 			img
-// 				width: 100%
-// 				height: 120px
-// 			p
-// 				font-size: 12px
-// 				line-height: 15px
-// 			a 
-// 				width: 90px
-// 				line-height: 25px
-// 				height: 25px
-// 				font-size: 10px
-// 			&:nth-child(3)
-// 				display: none
-// 			&:last-child
-// 				display: none
-// 	.footer
-// 		height: 286px
-// 	.footer__container
-// 		height: 224px	
-// 	.footer__copyright
-// 		p
-// 			font-size: 11px
-// 	.footer__container, .footer__copyright
-// 		width: 440px
-// 	.container__item
-// 		width: 48%
-// 		h4
-// 			font-size: 15px
-// 			margin: 15px 0
-// 		&:first-child
-// 			display: none
-// 		&:nth-child(2)
-// 			display: none
-// 		.newsletter__link
-// 			width: 30px
-// 			height: 30px
-// 			margin-right: 8px
-// 			i
-// 				font-size: 12px
-// 				margin-top: 9px
-// 				margin-left: 10px
-// 			.fa-google-plus
-// 				margin-left: 8px
-// //Media styles width (320px - 479px)
-// @media screen and (min-width: 320px) and (max-width: 479px)
-// 	.topbar
-// 		width: 320px
-// 		span
-// 			font-size: 10px
-// 	.topbar__link
-// 		font-size: 7.5px
-// 		span
-// 			font-size: 8px
-// 	.header
-// 		padding: 0
-// 		height: 100px
-// 	.header__navigation
-// 		width: 300px
-// 		height: 95%
-// 	.navigation__logo
-// 		top: 10px
-// 		left: 0px
-// 		h1
-// 			font-size: 26px
-// 			span
-// 				font-size: 16px
-// 		p
-// 			font-size: 10px
-// 			margin: 0
-// 	.menu__item
-// 		margin-left: 1px
-// 		height: 31px
-// 		font-size:  7.5px
-// 	.navigation__menu
-// 		width: 289px
-// 		height: 31px
-// 		bottom: 0px	
-// 		left: 0px
-// 	.slider__background
-// 		height: 200px
-// 	.slider
-// 		width: 320px
-// 		height: 200px
-// 	.slide
-// 		width: 320px
-// 		.monitor
-// 			width: 158px
-// 			height: 125px
-// 			bottom: 30px
-// 		.monitor__img
-// 			width: 146px
-// 			height: 81px
-// 			bottom: 68px
-// 			left: 26px
-// 		article
-// 			width: 320px
-// 			h2
-// 				font-size: 20px
-// 				text-align: center
-// 				margin-top: 12px
-// 				margin-left: 0
-// 			p
-// 				width: 122px
-// 				margin-top: 10px
-// 				margin-left: 188px
-// 				font-size: 8px
-// 				line-height: 12px
-// 			a
-// 				width: 70px
-// 				line-height: 17px
-// 				height: 17px
-// 				font-size: 8px
-// 				margin-top: 5px
-// 				margin-left: 188px
-// 				i
-// 					font-size: 7px
-// 	.slider__prev_btn, .slider__next_btn 
-// 		height: 39px
-// 		padding: 5px
-// 	.services
-// 		width: 220px
-// 		height: 436px
-// 		top: -40px
-// 		left: 50px
-// 		flex-direction: column
-// 		.services__item
-// 			width: 100%
-// 			img
-// 				margin-top: 20px
-// 				margin-left: 78px
-// 			h3
-// 				font-size: 15px
-// 				margin: 10px 0
-// 			p
-// 				font-size: 12px
-// 				line-height: 17px
-// 			&:nth-child(3)
-// 				display: none
-// 			&:last-child
-// 				display: none
-// 	.wrapper
-// 		width: 320px
-// 		height: 970px	
-// 		padding-top: 396px
-// 	.shout
-// 		height: 60px
-// 		padding: 10px
-// 		font-size: 13px
-// 		margin-bottom: 15px
-// 		p
-// 			line-height: 15px
-// 	.latestWork
-// 		width: 320px
-// 		height: 270px
-// 		flex-direction: column
-// 		.latestWork__item
-// 			margin: 0px auto 
-// 			width: 80%
-// 			h4
-// 				font-size: 15px
-// 				margin: 10px 0
-// 			img
-// 				width: 100%
-// 				height: 120px
-// 			p
-// 				font-size: 12px
-// 				line-height: 15px
-// 			a 
-// 				width: 90px
-// 				line-height: 25px
-// 				height: 25px
-// 				font-size: 10px
-// 			&:nth-child(3)
-// 				display: none
-// 			&:last-child
-// 				display: none
-// 	.footer
-// 		height: 505px
-// 	.footer__container
-// 		width: 320px
-// 		height: 443px	
-// 		flex-direction: column
-// 	.footer__copyright
-// 		height: 60px
-// 		p
-// 			font-size: 11px
-// 	.footer__copyright
-// 		width: 320px
-// 		display: flex
-// 		justify-content: center
-// 		p
-// 			font-size: 10px
-// 			&:last-child
-// 				display: none
-// 	.container__item
-// 		width: 80%
-// 		margin: auto
-// 		h4
-// 			font-size: 15px
-// 			margin: 15px 0
-// 		&:first-child
-// 			display: none
-// 		&:nth-child(2)
-// 			display: none
-// 		.newsletter__link
-// 			width: 30px
-// 			height: 30px
-// 			margin-right: 8px
-// 			i
-// 				font-size: 12px
-// 				margin-top: 9px
-// 				margin-left: 10px
-// 			.fa-google-plus
-// 				margin-left: 8px
+@media (max-width: 767px)
+	.topbar
+		width: 600px
+	.header
+		padding: 0
+		&__navigation
+			width: 560px
+	.navigation__logo
+		top: 10px
+		left: 15px
+	.navigation__menu
+		display: none
+	.slider__background
+		height: 320px
+	.slider
+		width: 600px
+		height: 320px
+	.slide
+		width: 600px
+		.monitor
+			width: 308px
+			height: 228px
+			bottom: 26px
+		.monitor_img
+			width: 284px
+			height: 148px
+			bottom: 95px
+			left: 32px
+		&_text
+			width: 260px
+			h2
+				font-size: 22px
+				margin-top: 64px
+			p
+				width: 220px
+				margin-top: 10px
+				font-size: 12px
+				line-height: 16px
+			a
+				width: 110px
+				line-height: 25px
+				height: 25px
+	.services
+		width: 500px
+		height: auto
+		.services__item
+			h3
+				font-size: 15px
+				margin: 10px 0
+			p
+				line-height: 17px
+	.wrapper
+		width: 600px
+		height: auto
+	.shout
+		padding: 10px
+	.latestWork
+		width: 540px
+		height: auto
+	.footer__container, .footer__copyright
+		width: 540px
+//Media styles width (480px - 599px)
+@media (max-width: 599px)
+	.topbar
+		width: 480px
+	.header
+		padding: 0
+	.header__navigation
+		width: 440px
+	.navigation__logo
+		top: 10px
+		left: 0px
+	.slider__background
+		height: 250px
+	.slider
+		width: 480px
+		height: 250px
+		&__prev_btn, &__next_btn 
+			height: 39px
+			padding: 5px
+	.slide
+		width: 480px
+		.monitor
+			width: 258px
+			height: 178px
+			bottom: 26px
+		.monitor_img
+			width: 238px
+			height: 115px
+			bottom: 80px
+			left: 30px
+		&_text
+			width: 200px
+			h2
+				font-size: 20px
+				margin-top: 60px
+			p
+				width: 180px
+				margin-top: 10px
+				font-size: 11px
+				line-height: 12px
+			a
+				width: 90px
+				line-height: 25px
+				height: 25px
+				font-size: 10px
+				margin-top: 10px
+	.services
+		width: 380px
+		height: 250px
+		top: -40px
+		.services__item
+			width: 48%
+			h3
+				margin: 10px 0
+			p
+				font-size: 12px
+				line-height: 17px
+	.wrapper
+		width: 480px
+		padding-top: 490px
+	.shout
+		// height: 60px
+		padding: 10px
+		p
+			line-height: 15px
+	.latestWork
+		width: 440px
+		justify-content: center
+		.latestWork__item
+			width: 85%
+			h4
+				font-size: 15px
+				margin: 10px 0
+			img
+				width: 100%
+			p
+				line-height: 15px
+			a 
+				width: 90px
+				line-height: 25px
+				height: 25px
+	.footer__copyright
+		p
+			font-size: 11px
+	.footer__container, .footer__copyright
+		width: 440px
+	.container__item
+		width: 45%
+		h4
+			margin: 15px 0
+		.newsletter__link
+			width: 30px
+			margin-right: 5px
+			i
+				font-size: 12px
+				margin-top: 9px
+				margin-left: 10px
+			.fa-google-plus
+				margin-left: 8px
+//Media styles width (320px - 479px)
+@media (max-width: 479px)
+	.topbar
+		width: 320px
+	.header__navigation
+		width: 300px
+		height: 95%
+	.navigation__logo
+		top: 10px
+		left: 0px
+		h1
+			font-size: 26px
+			span
+				font-size: 16px
+	.slider__background
+		height: 200px
+	.slider
+		width: 320px
+		height: 200px
+	&__prev_btn, &__next_btn 
+		height: 39px
+		padding: 5px
+	.slide
+		width: 320px
+		.monitor
+			width: 130px
+			height: 90px
+			bottom: 60px
+		.monitor_img
+			width: 120px
+			height: 59px
+			bottom: 87px
+			left: 25px
+		&_text
+			width: 320px
+			h2
+				font-size: 20px
+				text-align: center
+				margin-top: 12px
+				margin-left: 0
+			p
+				width: 160px
+				margin-top: 10px
+				margin-left: 157px
+				font-size: 10px
+				line-height: 12px
+			a
+				width: 70px
+				line-height: 17px
+				height: 17px
+				font-size: 10px
+				margin-top: 5px
+				margin-left: 157px
+				i
+					font-size: 8px
+	.services
+		width: 220px
+		.services__item
+			width: 100%
+	.wrapper
+		width: 320px
+		padding-top: 915px
+	.latestWork
+		width: 320px
+		.latestWork__item
+			width: 90%
+	.footer__container
+		width: 320px
+		justify-content: center
+		padding-bottom: 20px
+	.footer__copyright
+		width: 320px
+		display: flex
+		justify-content: center
+		p
+			font-size: 10px
+			&:last-child
+				display: none
+	.container__item
+		width: 90%
