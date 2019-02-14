@@ -32,6 +32,7 @@ $greyText: #999999
 	margin: 0 auto
 	padding: 0
 	padding-right: 20px
+	position: relative
 	text-align: right
 	box-sizing: border-box
 	span 
@@ -47,6 +48,73 @@ $greyText: #999999
 		margin: 0
 		&:hover
 			text-decoration: underline
+//hamburger
+.hamburger-menu
+	display: none
+	width: 170px
+	height: 30px
+	overflow: hidden
+	transition: 0.25s ease-in-out
+	text-transform: uppercase
+	z-index: 1000
+	&.active
+		height: 210px
+		width: 170px
+	&-item
+		display: flex
+		justify-content: center
+		width: 100%
+		height: 30px
+		text-decoration: none
+		color: $classicBlack
+		&:active
+			color: $lightPink
+.menu
+	width: 100%
+	display: flex
+	justify-content: space-between
+	color: $classicBlack
+	&_label
+		text-align: center
+		cursor: pointer
+		margin: 0
+		padding: 0
+		margin-left: 62px
+		margin-top: 6px
+.hamburger-menu-btn 
+	width: 30px
+	height: 30px
+	position: relative
+	cursor: pointer
+	span
+		transition: 0.25s ease-in-out
+		display: block
+		position: absolute
+		height: 4px
+		width: 100%
+		background: $classicBlack
+		border-radius: 5px
+		left: 0
+		transform: rotate(0deg)
+		&:nth-child(1)
+			top: 0px
+		&:nth-child(2), &:nth-child(3)
+			top: 12px
+		&:nth-child(4)
+			top: 24px
+	&.active
+		span:nth-child(1)
+			top: 15px
+			width: 0%
+			left: 50%
+		span:nth-child(2)
+			transform: rotate(45deg)	
+		span:nth-child(3)
+			transform: rotate(-45deg)
+		span:nth-child(4)
+			top: 15px
+			width: 0%
+			left: 50%
 //header styles
 .header
 	width: 100%
@@ -406,6 +474,16 @@ $greyText: #999999
 		margin-left: 7px
 //Media styles (768px - 999px) //Media styles//Media styles//Media styles//Media styles//Media styles//Media styles/
 @media (max-width: 999px)
+	.header
+		height: 130px
+		transition: 0.25s ease-in-out
+		&.menu-open
+			height: 280px
+	.hamburger-menu
+		display: block
+		position: absolute
+		top: 20px
+		right: 10px
 	.topbar
 		width: 768px
 	.header__navigation
@@ -436,6 +514,8 @@ $greyText: #999999
 				margin-top: 10px
 				font-size: 15px
 				line-height: 20px
+			a 
+				font-size: 15px
 	.services
 		width: 668px
 		height: auto
@@ -477,6 +557,12 @@ $greyText: #999999
 		width: 728px
 //Media styles width (600px - 767px)
 @media (max-width: 767px)
+	.header
+		height: 90px
+		&.menu-open
+			height: 240px
+	.hamburger-menu
+		top: 30px
 	.topbar
 		width: 600px
 	.header
@@ -518,6 +604,7 @@ $greyText: #999999
 				width: 110px
 				line-height: 25px
 				height: 25px
+				font-size: 12px
 	.services
 		width: 500px
 		height: auto
@@ -539,6 +626,12 @@ $greyText: #999999
 		width: 540px
 //Media styles width (480px - 599px)
 @media (max-width: 599px)
+	.header
+		height: 90px
+		&.menu-open
+			height: 240px
+	.hamburger-menu
+		top: 30px
 	.topbar
 		width: 480px
 	.header
@@ -638,6 +731,13 @@ $greyText: #999999
 				margin-left: 8px
 //Media styles width (320px - 479px)
 @media (max-width: 479px)
+	.header
+		height: 90px
+		&.menu-open
+			height: 240px
+	.hamburger-menu
+		top: 20px
+		right: 0px
 	.topbar
 		width: 320px
 	.header__navigation
@@ -647,9 +747,9 @@ $greyText: #999999
 		top: 10px
 		left: 0px
 		h1
-			font-size: 26px
+			font-size: 23px
 			span
-				font-size: 16px
+				font-size: 13px
 	.slider__background
 		height: 200px
 	.slider
@@ -683,7 +783,7 @@ $greyText: #999999
 				font-size: 10px
 				line-height: 12px
 			a
-				width: 70px
+				width: 80px
 				line-height: 17px
 				height: 17px
 				font-size: 10px
@@ -705,6 +805,7 @@ $greyText: #999999
 	.footer__container
 		width: 320px
 		justify-content: center
+		padding-top: 20px
 		padding-bottom: 20px
 	.footer__copyright
 		width: 320px

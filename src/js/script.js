@@ -27,4 +27,10 @@ $(document).ready(function(){
       prevSlide.fadeIn(1000);
       prevSlide.addClass('current');
     });
+
+    $('.menu').on('click', function(){
+      $('.hamburger-menu-btn').toggleClass('active');
+      $('.hamburger-menu').toggleClass('active');
+      $('header').toggleClass('menu-open');
+    });
 });
